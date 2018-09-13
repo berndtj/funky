@@ -18,8 +18,8 @@ test: ## run tests
 
 .PHONY: linux
 linux:
-	GOOS=linux go build -ldflags "$(GO_LDFLAGS)" -o bin/funky main.go
+	GOOS=linux go build -ldflags "$(GO_LDFLAGS)" -o funky main.go
 
 .PHONY: release
 release: linux
-	tar -czf funky$(VERSION).linux.amd64.tgz bin/funky
+	tar -czf funky$(VERSION).linux-amd64.tgz funky
